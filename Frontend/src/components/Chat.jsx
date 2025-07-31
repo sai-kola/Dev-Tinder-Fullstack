@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { createSocketConnection } from "../utils/socket";
 import { useSelector } from "react-redux";
 import axios from "axios";
-// import { BASE_URL } from "../utils/constants";
+//  import { BASE_URL } from "../utils/constants";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Chat = () => {
   const { targetUserId } = useParams();
@@ -13,7 +14,7 @@ const Chat = () => {
   const userId = user?._id;
 
   const fetchChatMessages = async () => {
-    const chat = await axios.get("http://localhost:7777/chat/" + targetUserId, {
+    const chat = await axios.get(`${BASE_URL}/chat/` + targetUserId, {
       withCredentials: true,
     });
 
