@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "tinder for devs",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/app.js"
-  },
+ "scripts": {
+  "start": "node server.js",        
+  "dev": "nodemon server.js"        
+},
   "author": "Sai kola",
   "license": "ISC",
   "dependencies": {
