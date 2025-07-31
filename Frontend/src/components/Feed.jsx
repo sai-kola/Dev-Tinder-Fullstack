@@ -1,9 +1,10 @@
 import axios from "axios";
-import { BASE_URL } from "../utils/constants";
+// import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedSlice";
 import { useEffect } from "react";
 import UserCard from "./UserCard";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);

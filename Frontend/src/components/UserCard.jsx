@@ -1,5 +1,6 @@
 import axios from "axios";
-import { BASE_URL } from "../utils/constants";
+// import { BASE_URL } from "../utils/constants";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 import { useDispatch } from "react-redux";
 import { removeUserFromFeed } from "../utils/feedSlice";
 
