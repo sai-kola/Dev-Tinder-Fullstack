@@ -12,6 +12,8 @@ const Connections = () => {
   const dispatch = useDispatch();
   const fetchConnections = async () => {
     try {
+      const token = localStorage.getItem("token");
+      console.log(token)
       const res = await axios.get( `${BASE_URL}/user/connections`, {
         withCredentials: true,
       });

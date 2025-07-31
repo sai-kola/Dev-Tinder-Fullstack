@@ -4,17 +4,18 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const http = require("http");
+app.use(express.json());
+app.use(cookieParser());
 
 require("dotenv").config();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://dev-tinder-fullstack.vercel.app"],
+    origin: ["https://dev-tinder-fullstack.vercel.app","http://localhost:5173"],
     credentials: true,
   })
 );
-app.use(express.json());
-app.use(cookieParser());
+
 
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
