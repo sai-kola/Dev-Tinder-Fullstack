@@ -33,11 +33,11 @@ app.use("/", paymentRounter);
 app.use("/", chatRouter);
 const server = http.createServer(app);
 initializeSocket(server);
-
+const PORT = process.env.PORT || 7777;
 connectDB()
   .then(() => {
     console.log("Database connection established...");
-    server.listen(7777, () => {
+    server.listen(PORT, () => {
       console.log("Server is successfully listening on port 7777...");
     });
   })
