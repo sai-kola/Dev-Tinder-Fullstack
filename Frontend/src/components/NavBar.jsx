@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 // import { BASE_URL } from "../utils/constants";
 import { removeUser } from "../utils/userSlice";
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const NavBar = () => {
   const user = useSelector((store) => store.user);

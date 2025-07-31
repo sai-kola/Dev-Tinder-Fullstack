@@ -4,7 +4,8 @@ import axios from "axios";
 // import { BASE_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
